@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanograz"
+dynamic = ["version"]
+authors = [{name = "Dominik Brandstetter", email = "dominik.brandstetter@uni-graz.at"},]
+maintainers = [{name = "Dominik Brandstetter", email = "dominik.brandstetter@uni-graz.at"},]
+description = "Everything changed when the fire nation attacked"
+readme = "README.rst"
+license = "MIT"
+dependencies = ["numpy", "matplotlib", "platformdirs"]
+requires-python = ">=3.8"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "line_profiler"]
+dev = ["flake8","numba"]
+publish = ["build", "twine", "pyinstaller"]
+docs = ["sphinx", "sphinx_rtd_theme"]
+
+[project.urls]
+Homepage = "https://github.com/brands-d/NanoGrazDemo"
+Documentation = "https://nanograzdemo.readthedocs.io/latest/"
+Issues = "https://github.com/brands-d/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "nanograz.__version__"}
