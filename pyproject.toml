@@ -31,5 +31,8 @@ Homepage = "https://github.com/brands-d/NanoGrazDemo"
 Documentation = "https://nanograzdemo.readthedocs.io/latest/"
 Issues = "https://github.com/brands-d/issues"
 
+[tool.setuptools]
+package-dir = {"" = "src"}
+
 [tool.setuptools.dynamic]
 version = {attr = "nanograz.__version__"}
