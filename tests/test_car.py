@@ -1,7 +1,6 @@
 import pytest
 
 from nanograz.OOP.car import Car, Truck
-from nanograz.OOP.vector import Vector
 
 
 @pytest.fixture
@@ -51,17 +50,13 @@ def test_car(car):
     assert car.model == "VW Golf"
 
 
-@pytest.fixture
-def a():
-    return Vector(1, 2)
+def test_mph_to_kmh():
+    assert Car.mph_to_kmh(0) == 0
+    assert Car.mph_to_kmh(-10) == pytest.approx(-16.0934)
+    assert Car.mph_to_kmh(25) == pytest.approx(40.2335)
 
 
-@pytest.fixture
-def b():
-    return Vector(3, 4)
-
-
-def test_vector_addition(a, b):
-    c = a + b
-
-    assert repr(c) == "2D-Vector: (4, 6)"
+def test_from_brand():
+    car1 = Car.from_brand("Ford")
+    assert isinstance(car1, Car)
+    assert car1.model == "Ford Focus"
