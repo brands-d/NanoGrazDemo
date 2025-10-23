@@ -1,4 +1,4 @@
-def square(x):
+def square(x: int | float) -> int | float:
     """
     Calculates the square of a number.
 
@@ -8,5 +8,4 @@ def square(x):
     Returns:
         int|float: The square of the input number.
     """
-    result = x * x
-    return result
+    return x * x
