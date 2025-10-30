@@ -2,7 +2,7 @@
 NanoGrazDemo
 ============
 
-This is a demo project for the NanoGraz meeting on October 30th, 2025.
+This is a demo project for the NanoGraz meeting on October 30th, 2025!
 
 Project Overview
 ================
